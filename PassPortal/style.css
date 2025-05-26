@@ -1,0 +1,151 @@
+
+        /* --- CSS Start --- */
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #ffdddd;
+            border: 1px solid #f44336;
+            color: #f44336;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #credential-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        #credential-form div {
+            margin-bottom: 15px;
+        }
+
+        #credential-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #credential-form input[type="text"],
+        #credential-form input[type="password"] {
+            width: calc(100% - 85px); /* Base width adjusted for button */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            vertical-align: middle; /* Align input with button */
+        }
+         #credential-form div > input[type="text"]{
+             width: calc(100% - 22px); /* Service/User don't have adjacent button */
+         }
+
+
+        #credential-form button[type="submit"],
+        #credential-form button[type="button"] {
+            padding: 10px 15px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 5px;
+             vertical-align: middle; /* Align button with input */
+        }
+
+        #credential-form button[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+
+        #credential-form button[type="button"]#toggle-password {
+            background-color: #f0ad4e;
+            width: 60px; /* Give toggle button a fixed width */
+            text-align: center;
+        }
+        #credential-form button[type="button"]#toggle-password:hover {
+            background-color: #ec971f;
+        }
+
+        #credentials-list {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .credential-item {
+            border: 1px solid #eee;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .credential-info {
+            flex-grow: 1;
+            margin-right: 10px; /* Space before delete button */
+            overflow: hidden; /* Prevent info from pushing button too far */
+        }
+
+        .credential-item span {
+            display: block; /* Put each piece of info on a new line */
+            margin-bottom: 5px;
+            word-wrap: break-word; /* Prevent long strings from overflowing */
+        }
+
+        .credential-item strong {
+            color: #555;
+        }
+
+        .delete-button {
+            padding: 8px 12px;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            flex-shrink: 0; /* Prevent button from shrinking */
+        }
+
+        .delete-button:hover {
+            background-color: #c9302c;
+        }
+
+        /* Basic responsiveness */
+        @media (max-width: 600px) {
+             #credential-form input[type="text"],
+             #credential-form input[type="password"] {
+                  /* Let inputs take more width relative to button */
+                  width: calc(100% - 70px);
+             }
+             #credential-form div > input[type="text"]{
+                 width: calc(100% - 22px); /* Service/User don't have adjacent button */
+             }
+
+            .credential-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .delete-button {
+                margin-top: 10px; /* Add space when button wraps below */
+                align-self: flex-end; /* Align delete button to the right */
+            }
+        }
+        /* --- CSS End --- */

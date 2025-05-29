@@ -7,6 +7,15 @@
             background-color: #f4f4f4;
         }
 
+        #home_btn {
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 100px;
+            height: 25px;
+
+        }
+
         h1, h2 {
             color: #333;
             border-bottom: 1px solid #ccc;

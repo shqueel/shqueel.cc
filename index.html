@@ -3,24 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick links</title>
+    <title>SHQL -/- CC</title>
     <link rel="stylesheet" href="style.css">
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+		const darkModeToggle = document.getElementById('darkModeToggle');
+		const shqlLogo = document.getElementById('shql_logo');
+		const body = document.body;
+
+		const shqlLight = 'media/shql_light.png';
+		const shqlDark = 'media/shql_dark.png';
+
+		// Check for a saved preference (optional)
+		if (localStorage.getItem('darkMode') === 'enabled') {
+			body.classList.add('dark-mode');
+		}
+
+		darkModeToggle.addEventListener('click', () => {
+			body.classList.toggle('dark-mode');
+
+				// Save preference (optional)
+				if (body.classList.contains('dark-mode')) {
+					localStorage.setItem('darkMode', 'enabled');
+					shql_logo.src = shqlDark;
+					darkModeToggle.textContent = "LIGHT"
+				} else {
+					localStorage.setItem('darkMode', 'disabled');
+					shql_logo.src = shqlLight;
+					darkModeToggle.textContent = "DARK"
+				}
+			});
+		});
+	</script>
     
 </head>
 <body>
+	<button id="darkModeToggle">DARK</button>
     <div id="container">
-        <h1>Quicklinks</h1>
-		<button type="button" onclick="location.href='./passportal'" >PassPortal</button>
-		<button type="button" onclick="location.href='https://google.com'" disabled>PLEX</button>
-		
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<h1>Website currently under maintenance</h1>
-		<h3>Some buttons may be disabled.</h3>
+        <nav>
+			<img id="shql_logo" src="media/shql_light.png" width="100px">
+			<div id="nav_links">
+				<a href="#">Home</a>
+				<a href="./passportal/">PassPortal</a>
+				<a href="#" title="Coming soon" >PLEX</a>
+			</div>
+		</nav>
+		<div id="main">
+			<h1>Page under construction.</h1>
+		</div>
     </div>
 </body>
 

@@ -11,10 +11,12 @@ html {
 }
 
 body {
-    font-family: 'Martian Mono', Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', monospace;
     min-height: 100vh;
-    margin: 0;
-    padding: 10;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 #darkModeToggle {
@@ -29,8 +31,13 @@ body {
 }
 
 #container {
+    display: flex;
+    margin: 0 auto 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
-    height: 100%;
+    width: 450px;
+    height: 95vh;
 }
 
 nav {
@@ -75,14 +82,17 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 250px;
+    width: 350px;
+    margin: 0 auto 0 auto;
+    padding: 15px;
+    border: #2b2b2b dotted 1px;
 }
 
 footer {
     width: 300px;
     margin: 0 auto 0 auto;
     text-align: center;
-    font-family: 'Courier New', monospace;
 }
 
 footer a {

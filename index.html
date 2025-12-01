@@ -5,38 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHQL -/- CC</title>
     <link rel="stylesheet" href="stylesheets/style.css">
-
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-		const darkModeToggle = document.getElementById('darkModeToggle');
-		const shqlLogo = document.getElementById('shql_logo');
-		const body = document.body;
-
-		const shqlLight = 'media/shql_light.png';
-		const shqlDark = 'media/shql_dark.png';
-
-		// Check for a saved preference (optional)
-		if (localStorage.getItem('darkMode') === 'enabled') {
-			body.classList.add('dark-mode');
-		}
-
-		darkModeToggle.addEventListener('click', () => {
-			body.classList.toggle('dark-mode');
-
-				// Save preference (optional)
-				if (body.classList.contains('dark-mode')) {
-					localStorage.setItem('darkMode', 'enabled');
-					shql_logo.src = shqlDark;
-					darkModeToggle.textContent = "LIGHT"
-				} else {
-					localStorage.setItem('darkMode', 'disabled');
-					shql_logo.src = shqlLight;
-					darkModeToggle.textContent = "DARK"
-				}
-			});
-		});
-	</script>
-    
 </head>
 <body>
     <div id="container">
